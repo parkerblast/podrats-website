@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" [routerLink]="['/home']">Elephalgos Collection</a>
+            <a class="navbar-brand" [routerLink]="['/home']">Pod Rats Podcast</a>
             <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
                 <span class="navbar-toggler-bar"></span>
                 <span class="navbar-toggler-bar"></span>
@@ -11,59 +11,31 @@
         <div class="navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" rel="tooltip" title="Follow Elephalgos on Twitter" data-placement="bottom" href="https://twitter.com/Elephalgo" target="_blank">
+                    <a class="nav-link" rel="tooltip" title="Follow on Twitter!" data-placement="bottom" href="https://twitter.com/the_podrats" target="_blank">
                         <i class="fab fa-twitter"></i>
                         <p class="d-lg-none"> Twitter</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" rel="tooltip" title="Join the Herd on Discord" data-placement="bottom" href="https://discord.gg/27StdXYjGc" target="_blank">
-                        <i class="fab fa-discord"></i>
-                        <p class="d-lg-none"> Discord</p>
+                    <a class="nav-link" rel="tooltip" title="Follow on Instagram!" data-placement="bottom" href="https://www.instagram.com/thepodrats/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <p class="d-lg-none"> Instagram</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" rel="tooltip" title="Check out the GitHub" data-placement="bottom" href="https://github.com/parkerblast" target="_blank">
-                        <i class="fab fa-github"></i>
-                        <p class="d-lg-none"> GitHub</p>
+                    <a class="nav-link" rel="tooltip" title="Follow on Letterboxd!" data-placement="bottom" href="https://letterboxd.com/ThePodRats/" target="_blank">
+                        <i class="fa-solid fa-l"></i>
+                        <p class="d-lg-none"> etterboxd</p>
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" rel="tooltip" title="Find us on Rand Gallery" data-placement="bottom" href="https://www.randgallery.com/collection/elephalgos/" target="_blank">
-                        <i class="fa-solid fa-r"></i>
-                        <p class="d-lg-none"> and Gallery</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" rel="tooltip" title="Find us on AB2" data-placement="bottom" href="" target="_blank">
-                        <i class="fa-solid fa-a"></i>
-                        <p class="d-lg-none"> B2 Gallery</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a *ngIf="!isSignedIn()" [routerLink]="['/signin']" class="nav-link">Sign In</a>
-                </li>
-                <li class="nav-item">
-                    <button *ngIf="isSignedIn()" type="button" [routerLink]="['/settings']" class="btn btn-info btn-just-icon">
-                        <i class="fa-solid fa-gear"></i>
-                    </button>
                 </li>
                 <li class="nav-item">
                     <div ngbDropdown class="d-inline-block dropdown">
-                        <a class="btn btn-round btn-outline-info" id="dropdownBasic1" ngbDropdownToggle><i class ="fa-solid fa-list"></i> Pages</a>
+                        <a class="btn btn-round btn-outline-danger" id="dropdownBasic1" ngbDropdownToggle><i class ="fa-solid fa-list"></i> Pages</a>
                         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
                             <div class="dropdown-header">All Pages</div>
                             <a [routerLink]="['/home']" class="dropdown-item" *ngIf="!isHome()">Home</a>
-                            <a href="https://www.nftexplorer.app/collection/elephalgos" class="dropdown-item">The Collection</a>
-                            <a [routerLink]="['/roadmap']" class="dropdown-item">Roadmap</a>
-                            <!--- <a [routerLink]="['/home']" class="dropdown-item">Traits</a> --->
-                            <a [routerLink]="['/gameplayer']" class="dropdown-item">Game</a>
-                            <a [routerLink]="['/leaderboard']" class="dropdown-item">Leaderboard</a>
-                            <a [routerLink]="['/discordbot']" class="dropdown-item">Discord Bot</a>
-                            <!--- <a [routerLink]="['/home']" class="dropdown-item">Profile</a> --->
                             <div class="dropdown-divider"></div>
                             <a [routerLink]="['/faq']" class="dropdown-item">FAQ</a>
-                            <a *ngIf="isSignedIn()" (click)="Logout()" class="dropdown-item">Log Out</a>
                         </div>
                     </div>
                 </li>

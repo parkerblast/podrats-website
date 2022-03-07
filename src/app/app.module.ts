@@ -9,24 +9,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ComponentsModule } from './components/components.module';
-import { SigninComponent } from './signin/signin.component';
-import { SignupComponent } from './signup/signup.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { GametestpageComponent } from './gametestpage/gametestpage.component';
-import { LeaderboardpageComponent } from './leaderboardpage/leaderboardpage.component';
-import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    SigninComponent,
-    SignupComponent,
-    GametestpageComponent,
-    LeaderboardpageComponent,
-    SettingsComponent
   ],
   imports: [
     BrowserModule,
