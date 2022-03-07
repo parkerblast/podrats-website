@@ -1,0 +1,57 @@
+.main{
+	width: 100%;
+	height: auto;
+	background-color: rgb(27, 27, 27);
+	padding: 50px 0;
+	display: grid;
+	place-items: center;
+}
+ 
+ .box{
+    width: 75%;
+    margin: 30px;
+    background: rgb(150, 148, 148);
+    border-radius: 7px;
+    box-shadow: 2px 3px 12px rgb(0, 0, 0);
+ }
+ 
+ .box .heading{
+    background: #404242;
+    border-radius: 7px 7px 0px 0px;
+    padding: 10px;
+    font-size: 25pt;
+    font-weight:bolder;
+    color: #00bbff;
+    text-align: center;
+ }
+ 
+ .faqs{
+    padding: 0px 20px 20px;
+ }
+ 
+ ::-webkit-details-marker{
+    float: right;
+    margin-top: 3px;
+ }
+ 
+ details{
+    background: #dadada;
+    padding: 10px 20px;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #000000;
+ }
+ 
+ details summary{
+    outline: none;
+    color: #000000;
+    font-size: 15pt;
+    font-weight: bolder;
+ } 
+
+ details p{
+     padding: 0px 25px;
+ }

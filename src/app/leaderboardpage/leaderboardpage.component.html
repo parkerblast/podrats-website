@@ -1,0 +1,28 @@
+<div class="center">
+    <div class="top3">
+        <ul>
+            <li *ngFor="let item of leaderboard | slice:0:3">
+                <div class="pos">{{ item.Position + 1 }}</div>
+                <div class="pic" *ngIf="item.Profile.AvatarUrl.split(',')[1] != null" style="background-image: url('{{item.Profile.AvatarUrl.split(',')[1] }}')"></div>
+                <div class="pic" *ngIf="item.Profile.AvatarUrl.split(',')[1] == null" style="background-image: url('./assets/img/GhostOutline.png')"></div>
+                <div class="name">{{ item.DisplayName }}</div>
+                <div class="score">{{ item.StatValue }}</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="main">
+    <div class="list">
+        <ul>
+            <li  *ngFor="let item of leaderboard | slice:3:100">
+                <div class="pos">{{ item.Position + 1 }}</div>
+                <div class="pic" *ngIf="item.Profile.AvatarUrl.split(',')[1] != null" style="background-image: url('{{item.Profile.AvatarUrl.split(',')[1] }}')"></div>
+                <div class="pic" *ngIf="item.Profile.AvatarUrl.split(',')[1] == null" style="background-image: url('./assets/img/GhostOutline.png')"></div>
+                <div class="name" *ngIf="item.DisplayName != null">{{ item.DisplayName }}</div>
+                <div class="name" *ngIf="item.DisplayName == null">{{ item.PlayFabId }}</div>
+                <div class="score">{{item.StatValue}}</div>
+            </li>
+        </ul>
+    </div>
+</div>
